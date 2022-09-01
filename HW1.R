@@ -80,5 +80,3 @@ exp_var <- var(sim$sim)
 exp_var
 
 #4.18
-
-integrate()
