@@ -105,19 +105,19 @@ The range is 9.27 and the approximate standard deviation via the empirical rule 
 ##3.115
 
 ```{r}
-dhyper(0:2, 2, 6, 3)
+dhyper(0:2, 2, 4, 3)
 
-pop <- data.frame(prob = dhyper(0:2, 2, 6, 3), y = 0:2)
+pop <- data.frame(prob = dhyper(0:2, 2, 4, 3), y = 0:2)
 
 ggplot(data = pop, aes(y, prob)) + 
   geom_col()
 ```
-Per the output, the probabilities for P(y = 0), P(y = 1), and P(y = 2) are 0.3571429, 0.5357143, and 0.1071429 respectively. 
+Per the output, the probabilities for P(y = 0), P(y = 1), and P(y = 2) are 0.2, 0.6, and 0.2 respectively. 
 
 ##3.116
 
 ```{r}
-sim <- data.frame(sim = rhyper(100, 2, 6, 3)) 
+sim <- data.frame(sim = rhyper(100, 2, 4, 3)) 
 
 sim %>%
 ggplot(aes(sim)) + 
@@ -135,7 +135,7 @@ pop_mean
 sample_mean <- mean(sim$sim)
 sample_mean
 ```
-The mean based on the probability distribution/population is 0.75, and the sample mean is 0.7. The sample mean does provide a good estimate of the population mean.
+The mean based on the probability distribution/population is 1, and the sample mean is 1.06. The sample mean does provide a good estimate of the population mean.
 
 
 ##3.191
