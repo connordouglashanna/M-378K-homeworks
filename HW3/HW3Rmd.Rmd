@@ -1,0 +1,76 @@
+---
+title: "HW3"
+author: "Connor Hanna"
+date: '2022-09-18'
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 7.9
+
+### a)
+
+```{r}
+pnorm(1.2)
+pnorm(-1.2)
+pnorm(1.2) - pnorm(-1.2)
+```
+
+So the probability of the sample mean deviating from the true mean by more than .3 given n = 16 is .769
+
+### b)
+
+```{r}
+# n = 25
+pnorm(1.5)
+pnorm(-1.5)
+pnorm(1.5) - pnorm(-1.5)
+
+# n = 36
+pnorm(1.8)
+pnorm(-1.8)
+pnorm(1.8) - pnorm(-1.8)
+
+# n = 49
+pnorm(2.1)
+pnorm(-2.1)
+pnorm(2.1) - pnorm(-2.1)
+
+# n = 64
+pnorm(2.4)
+pnorm(-2.4)
+pnorm(2.4) - pnorm(-2.4)
+```
+
+## 7.15
+
+### c)
+
+```{r}
+
+qnorm(.025)
+qnorm(.975)
+
+```
+## 7.26
+
+```{r}
+qt(p = 0.05, df = 8)
+qt(p = 0.05, df = 8, lower.tail = FALSE)
+```
+So we have lower and upper t-stats as +/-1.859
+
+## 7.43
+
+```{r}
+pnorm(2) - pnorm(-2)
+```
+
+## 7.72
+
+```{r}
+pnorm(1.833, lower.tail = FALSE)
+```

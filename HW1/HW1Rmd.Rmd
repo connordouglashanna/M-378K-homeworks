@@ -24,31 +24,29 @@ stonks <-
 stonksdf <- data.frame(stonks)
 ```
 
-## 1.4
-### a
+##1.4
+#a
 
 ```{r}
 ggplot(data = stonksdf, aes(stonks)) + 
   geom_histogram(bins = 6)
 ```
-
-### b
-
+#b
 ```{r}
 sum(stonksdf$stonks > 4)/count(stonksdf)
 ```
 
 So the proportion of stocks traded at above 4% were 0.45.
 
-### c
+#c
 ```{r}
 sum(stonksdf$stonks < 5)/count(stonksdf)
 ```
 
 So the proportion of stocks traded at below 5% were 0.725.
 
-## 1.15 
-### a
+##1.15 
+#a
 
 ```{r}
 mstonk <- mean(stonks)
@@ -63,7 +61,7 @@ sdstonk
 ```
 So the sample mean is 4.387, the sample variance is 3.502, and the sample standard deviation is 1.871.
 
-### b
+#b
 
 ```{r}
 kstonk <-
@@ -94,7 +92,7 @@ nstonk(3)
 
 So the bounds for the intervals are 6.258384-2.515616, 8.1297679-0.6442321, and 10.001152-(-1.227152) respectively for k = 1, 2, 3. The counts are 35, 39, 39, and in percentage terms the intervals contain 87.5%, 97.5%, and 97.5% of entries respectively. This is notably higher than the estimates for the empirical rule, likely because of the relative influence of outliers on the upper bound and also because the distribution has a distinct right skew. 
 
-## 1.17
+##1.17
 
 ```{r}
 range <- max(stonks) - min(stonks)
@@ -104,7 +102,7 @@ appx
 ```
 The range is 9.27 and the approximate standard deviation via the empirical rule is 2.317. This is higher than the calculated standard deviation, likely because of the skew in the distribution. 
 
-## 3.115
+##3.115
 
 ```{r}
 dhyper(0:2, 2, 4, 3)
@@ -116,7 +114,7 @@ ggplot(data = pop, aes(y, prob)) +
 ```
 Per the output, the probabilities for P(y = 0), P(y = 1), and P(y = 2) are 0.2, 0.6, and 0.2 respectively. 
 
-## 3.116
+##3.116
 
 ```{r}
 sim <- data.frame(sim = rhyper(100, 2, 4, 3)) 
@@ -128,7 +126,7 @@ ggplot(aes(sim)) +
 
 Simulation of experimental data generation and the accompanying histogram generated above. 
 
-## 3.190
+##3.190
 
 ```{r}
 pop_mean <- sum(pop$prob * pop$y)
@@ -140,7 +138,7 @@ sample_mean
 The mean based on the probability distribution/population is 1, and the sample mean is 1.06. The sample mean does provide a good estimate of the population mean.
 
 
-## 3.191
+##3.191
 
 
 
@@ -156,10 +154,10 @@ sample_var
 The population variance is 0.4017857, and the sample variance is 0.3939394. The sample variance is an excellent approximation of the population variance. 
 
 
-## 4.18
+##4.18
 
 See additional hand work in accompanying PDF.
 
-## 4.22
+##4.22
 
 See additional hand work in accompanying PDF.
